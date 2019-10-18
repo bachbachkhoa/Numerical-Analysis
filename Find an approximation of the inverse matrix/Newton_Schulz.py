@@ -9,9 +9,9 @@
 
 import numpy as np
 
-def isSquare(m):
+def isSquare(A):
     '''Check square matrix'''
-    return all (len (row) == len (m) for row in m)
+    return all (len (row) == len (A) for row in A)
 
 '''Initialize X0'''
 def initialX(A):
