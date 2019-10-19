@@ -17,7 +17,7 @@ x = Symbol('x')
 
 def Newton(f, a, b, err, Nmax):
     if f.subs(x, a)*f.subs(x, b) >= 0:
-        return ('\ninterval (a, b) wrong', 0)
+        return '\ninterval (a, b) wrong'
     else:
         df = f.diff(x)
         m = min(abs(df.subs(x, a)), abs(df.subs(x, b)))
@@ -35,10 +35,10 @@ def Newton(f, a, b, err, Nmax):
 
 def main():
     f = x**3 + x - 1000
-    root, k = Newton(f, 9, 10, 1e-5, 100)
-    if root == '\ninterval (a, b) wrong':
-        print(root)
+    if Newton(f, 9, 10, 1e-5, 100) == '\ninterval (a, b) wrong':
+        print('\ninterval (a, b) wrong')
     else:
+        root, k = Newton(f, 9, 10, 1e-5, 100)
         print("\nroot of equation: ", root)
         print("\nnumber of iteration: ", k)
 
