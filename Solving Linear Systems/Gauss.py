@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import numpy as np
 
 '''Gauss Elimination to find exact root of linear system Ax = b
-   Input: matrix Ab such Ax = b
+   Input: augmented matrix of system
    Output: vector x or message: 'The system has no unique root'
 '''
 
@@ -39,7 +39,7 @@ def main():
 	A = np.loadtxt(inFile)
 	A = A.tolist()
 
-	# Find rank of coefficient matrix and expanded coefficient matrix
+	# Find rank of coefficient matrix and augmented matrix
 	n = len(A[0]) - 1	# number of variables in the system
 	B = []
 	for i in A:
