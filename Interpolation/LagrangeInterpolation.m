@@ -15,7 +15,7 @@ else
     D = (x - dataX).*subs(dw, dataX);
     P = simplify(w*sum(dataY./D));
     P_x0 = double(subs(P, x0));
-    fprintf('\nHam noi suy: P = ');
+    fprintf('\nP = ');
     disp(P);
     disp(['P(', num2str(x0), ') = ', num2str(P_x0)]);
 end
