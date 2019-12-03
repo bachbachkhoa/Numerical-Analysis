@@ -49,7 +49,7 @@ def main():
 		A.append(i[:-1])
 		b.append(i[-1])
 	rm = np.linalg.matrix_rank(np.array(m))	# Rank of augmented matrix
-	rA = np.linalg.matrix_rank(np.array(A))		# Rank of coefficient matrix
+	rA = np.linalg.matrix_rank(np.array(A))	# Rank of coefficient matrix
 
 	# Solve system
 	if rA == rm == len(b):
