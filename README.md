@@ -1,1 +1,2 @@
 # Numerical-Analysis
+Author: Duynt
