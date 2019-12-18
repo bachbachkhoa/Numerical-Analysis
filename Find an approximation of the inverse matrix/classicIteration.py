@@ -23,8 +23,8 @@ def isSquare(m):
 def isDDM(A):
 	'''Check diagonally dominant matrix. Return
 	   0: Not diagonally dominant matrix
-	   1: Matrix dominates diagonally in rows
-	   2: Matrix dominates diagonally in columns'''
+	   1: Row diagonal dominance
+	   2: Column diagonal dominance'''
 	d = len(A)
 	rowCheck = 1
 	colCheck = 2
@@ -59,7 +59,7 @@ def diagonalMatrixT(A):
 	return (T, invT)
 
 def rowDDM(A, T, X, err):
-	'''Matrix dominates diagonally in rows'''
+	'''Row diagonal dominance'''
 	E = np.eye(len(A))
 	X1 = np.dot(np.subtract(E, np.dot(T, A)), X) + np.dot(T, E)
 	k = 0
@@ -75,7 +75,7 @@ def rowDDM(A, T, X, err):
 	return (X_before, k)
 
 def colDDM(A, T, Y, err):
-	'''Matrix dominates diagonally in columns'''
+	'''Column diagonal dominance'''
 	E = np.eye(len(A))
 	Y1 = np.dot(np.subtract(E, np.dot(A, T)), Y) + E
 	k = 0
