@@ -25,7 +25,7 @@ start_index = delta_min_index(1);
 delta1 = abs(start_index - [1 n]);
 
 if delta1(1) <= delta1(2)
-    % Newton’s forward interpolation
+    % Newtonâ€™s forward interpolation
     P = f(start_index, 1);
     for i = 2:n - start_index + 1
         t = 1;
@@ -34,12 +34,8 @@ if delta1(1) <= delta1(2)
         end
         P = P + t*f(start_index, i);
     end
-    P = simplify(P);
-    disp(P);
-    P_c = double(subs(P, c));
-    disp(P_c);
 else
-    % Newton’s backward interpolation
+    % Newtonâ€™s backward interpolation
     P = f(start_index, 1);
     for i = 2:start_index
         t = 1;
@@ -48,11 +44,11 @@ else
         end
         P = P + t*f(start_index - i + 1, i);
     end
-    P = simplify(P);
-    disp(P);
-    P_c = double(subs(P, c));
-    disp(P_c);
 end
+P = simplify(P);
+disp(P);
+P_c = double(subs(P, c));
+disp(P_c);
 end
 
 
