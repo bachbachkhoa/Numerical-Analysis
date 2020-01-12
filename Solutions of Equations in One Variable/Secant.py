@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 #Author: Duynt
 
 from sympy import *
@@ -19,7 +21,7 @@ def secant(f, a, b, err, Nmax):
 			M, m = abs(diff(f, x).subs(x, a)), abs(diff(f, x).subs(x, b))
 		k = 0
 		fd = f.subs(x, d)
-		err = m/(M - m)*err
+		err *= m/(M - m)
 		while True:
 			xAfter = xBefore - (d - xBefore)/(fd - f.subs(x, xBefore))*f.subs(x, xBefore)
 			k += 1
