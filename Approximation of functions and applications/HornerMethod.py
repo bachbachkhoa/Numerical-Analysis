@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# Author: Duynt
 
 
 '''Horner's method and its applications '''
