@@ -12,7 +12,7 @@ import numpy as np
 def Cholesky(A, b):
 	
 	# A is symmetric matrix
-	# Decomposite A = L.T*L such that L is lower triangular matrix
+	# Decomposite A = L*L^T such that L is lower triangular matrix
 	L = np.zeros_like(A)
 	n = len(L)
 	for i in range(n):
