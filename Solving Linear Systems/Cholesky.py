@@ -1,16 +1,17 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# Author: Duynt
+
 import numpy as np
 
 
 '''Cholesky method to find root of linear system
-   Input: augmented matrix of system
+   Input: augmented matrix of system (coefficient matrix is symmetric matrix)
    Output: root of system
 '''
 
 
 def Cholesky(A, b):
-
+	
+	# A is symmetric matrix
 	# Decomposite A = L.T*L such that L is lower triangular matrix
 	L = np.zeros_like(A)
 	n = len(L)
@@ -43,7 +44,7 @@ def main():
 	m = np.loadtxt(inFile)	# Augmented matrix
 	m = m.tolist()
 
-	A = []	# Coefficient matrix
+	A = []	# Coefficient matrix (symmetrix matrix)
 	b = []	# Constant vector
 	for i in m:
 		A.append(i[:-1])
