@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+# Author: Duynt
+
 import numpy as np
 from sympy import *
 
